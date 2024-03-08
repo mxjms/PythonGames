@@ -2,7 +2,7 @@ import random
 
 def greeting():
     return "Ready?"
-print(greeting()) #this will print to the console what is entered
+print(greeting())
 
 def battle():
     person_one = "Rock."
@@ -27,10 +27,9 @@ def get_choices():
 
 
 # implementing arguments and statements; concatantaion 
-# Refactoring - process of restructuring code while keeping functionality; usually to make simpler code & nesting
 
-def check_winner(thePlayer, theComputer):           # would run by calling 'check_winner' and inputting arugments EX: check_winner("rock", "paper")
-    print(f"You chose {thePlayer}. The computer chose {theComputer}.")          # print("You chose " + player + ". The computer chose " + computer)
+def check_winner(thePlayer, theComputer):
+    print(f"You chose {thePlayer}. The computer chose {theComputer}.")
     if thePlayer == theComputer:
         return "It's a tie!"
     elif thePlayer == "rock":
@@ -55,33 +54,3 @@ def check_winner(thePlayer, theComputer):           # would run by calling 'chec
 choices = get_choices()
 result = check_winner(choices["player"], choices["computer"])
 print(result)
-
-
-
-
-
-# EXTRA : types
-name = "Max"
-age = 39
-
-print(type(name))       # this should print the data type of 'name' in the console (should come out as string)
-
-print(type(name) == str)        # this checks if data type equals string, and puts out a boolean (True or False)
-print(isinstance(age, int))     # does the same, checking datatype matches (is age an integer)
-
-
-# conversion
-myAge = int("20")
-
-price = "3.76"
-thePrice = float(price)     # called 'casting'
-
-# complex   for complex numbers
-# bool  for booleans
-# list  for lists
-# tuple for tuples
-# range     for ranges
-# dict  for dictionaries
-# set   for sets
-
-# Arithmetic Operators : + , - , * , / , % , ** , //
