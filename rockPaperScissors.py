@@ -38,12 +38,12 @@ def check_winner(thePlayer, theComputer):
             return "You win!"
         else:
             return "You lose..."
-    elif thePlayer == "":
+    elif thePlayer == "paper":
         if theComputer == "rock":
             return "You win!"
         else:
             return "You lose..."
-    elif thePlayer == "SCISSORS":
+    elif thePlayer == "scissors":
         if theComputer == "paper":
             return "You win!"
         else:
