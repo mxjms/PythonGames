@@ -1,7 +1,8 @@
 import random
 
 def greeting():
-    return "Ready?"
+    return "Are you ready?"
+
 print(greeting())
 
 def battle():
@@ -22,7 +23,7 @@ def get_choices():
     player_choice = input("Enter choice (rock, paper, or scissors): ")
     options = ["rock", "paper", "scissors"]
     computer_choice = random.choice(options)
-    choices = {"player" : player_choice, "computer" : computer_choice}
+    choices = {"player" : player_choice.lower(), "computer" : computer_choice}
     return choices
 
 
@@ -37,19 +38,19 @@ def check_winner(thePlayer, theComputer):
             return "You win!"
         else:
             return "You lose..."
-    elif thePlayer == "paper":
+    elif thePlayer == "":
         if theComputer == "rock":
             return "You win!"
         else:
             return "You lose..."
-    elif thePlayer == "scissors":
+    elif thePlayer == "SCISSORS":
         if theComputer == "paper":
             return "You win!"
         else:
             return "You lose..."
 
 
-# accessing dicionary values
+# accessing dictionary values
         
 choices = get_choices()
 result = check_winner(choices["player"], choices["computer"])
